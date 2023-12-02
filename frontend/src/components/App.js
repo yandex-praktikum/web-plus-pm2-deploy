@@ -33,8 +33,8 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
   const [email, setEmail] = React.useState("");
 
-  const [token, setToken] = React.useState(localStorage.getItem("jwt"));
-  
+  const [token, setToken] = React.useState(() => localStorage.getItem("jwt"));
+
   const history = useHistory();
 
 
